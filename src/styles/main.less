@@ -1,12 +1,22 @@
 @import "variaveis.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(max-width: 1023px)";
 body{
     //no less podemos comentar em linha , igual no java script
     /* ou podemos comentar assim*/
     background-color: @corDeFundo;
     color: @corDosTextos;
+    .container{
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
 
-    h2{
-        
+        @media @breakpointTablet {
+            max-width: 80%;
+        }
+        @media @breakpointMobile {
+            max-width: 70%;
+        }
     }
 
 }
